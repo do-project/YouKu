@@ -1,0 +1,41 @@
+{
+    "RootView": {
+        "id": "AlayoutRoot",
+        "width": "480",
+        "height": "854",
+        "type": "do_ALayout",
+        "views": [
+            {
+                "id": "do_scrollview_2",
+                "width": "480",
+                "height": "700",
+                "type": "do_ScrollView",
+                "views": [
+                    {
+                        "id": "do_alayout_2",
+                        "width": "480",
+                        "height": "950",
+                        "type": "do_ALayout",
+                        "views": [
+                            {
+                                "id": "do_imageview_1",
+                                "width": "480",
+                                "height": "450",
+                                "type": "do_ImageView",
+                                "source": "source://image/dingyue/dingyue1.png"
+                            },
+                            {
+                                "id": "do_imageview_2",
+                                "y": "450",
+                                "width": "480",
+                                "height": "500",
+                                "type": "do_ImageView",
+                                "source": "source://image/dingyue/dingyue2.png"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

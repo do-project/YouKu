@@ -1,0 +1,41 @@
+{
+    "RootView": {
+        "id": "AlayoutRoot",
+        "width": "480",
+        "height": "854",
+        "type": "do_ALayout",
+        "views": [
+            {
+                "id": "do_scrollview_1",
+                "width": "480",
+                "height": "700",
+                "type": "do_ScrollView",
+                "views": [
+                    {
+                        "id": "do_alayout_1",
+                        "width": "480",
+                        "height": "1000",
+                        "type": "do_ALayout",
+                        "views": [
+                            {
+                                "id": "do_imageview_1",
+                                "width": "480",
+                                "height": "300",
+                                "type": "do_ImageView",
+                                "source": "source://image/pindao/pindaoyi.png"
+                            },
+                            {
+                                "id": "do_imageview_2",
+                                "y": "300",
+                                "width": "480",
+                                "height": "700",
+                                "type": "do_ImageView",
+                                "source": "source://image/pindao/pindao2.png"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

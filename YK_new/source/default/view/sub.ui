@@ -1,0 +1,88 @@
+{
+    "RootView": {
+        "id": "AlayoutRoot",
+        "width": "480",
+        "height": "854",
+        "type": "do_ALayout",
+        "views": [
+            {
+                "id": "do_scrollview_1",
+                "width": "480",
+                "height": "854",
+                "type": "do_ScrollView",
+                "views": [
+                    {
+                        "id": "do_alayout_2",
+                        "width": "480",
+                        "height": "900",
+                        "type": "do_ALayout",
+                        "views": [
+                            {
+                                "id": "do_alayout_3",
+                                "width": "480",
+                                "height": "200",
+                                "type": "do_ALayout",
+                                "bgImage": "source://image/find/head.png",
+                                "views": [
+                                    {
+                                        "id": "do_alayout_1",
+                                        "x": "20",
+                                        "y": "30",
+                                        "width": "440",
+                                        "height": "50",
+                                        "type": "do_ALayout",
+                                        "bgImage": "source://image/find/mainfind.png",
+                                        "views": [
+                                            {
+                                                "id": "action_back",
+                                                "height": "50",
+                                                "bgColor": "FFFFFFFF",
+                                                "type": "do_Button",
+                                                "fontSize": "27",
+                                                "fontStyle": "bold",
+                                                "text": "ㄑ优酷"
+                                            },
+                                            {
+                                                "id": "do_textfield_1",
+                                                "x": "100",
+                                                "width": "290",
+                                                "height": "50",
+                                                "type": "do_TextField",
+                                                "border": "08080808,1,1"
+                                            },
+                                            {
+                                                "id": "do_label_1",
+                                                "x": "390",
+                                                "y": "5",
+                                                "width": "1",
+                                                "height": "40",
+                                                "bgColor": "05050505",
+                                                "type": "do_Label"
+                                            },
+                                            {
+                                                "id": "do_button_1",
+                                                "x": "390",
+                                                "width": "50",
+                                                "height": "50",
+                                                "type": "do_Button",
+                                                "bgImage": "source://image/find/TB1.png"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "do_imageview_2",
+                                "y": "200",
+                                "width": "480",
+                                "height": "700",
+                                "type": "do_ImageView",
+                                "source": "source://image/find/find1.png"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
