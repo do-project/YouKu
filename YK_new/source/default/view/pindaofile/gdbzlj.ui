@@ -1,0 +1,17 @@
+{
+	"RootView":{
+		"width":"480",
+		"id":"AlayoutRoot",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"width":"480",
+				"id":"do_Button_1",
+				"bgImage":"source://image/pindao/gdbzlj.jpg",
+				"type":"do_Button",
+				"height":"300"
+			}
+		],
+		"height":"854"
+	}
+}

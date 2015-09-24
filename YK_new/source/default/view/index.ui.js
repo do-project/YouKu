@@ -22,19 +22,59 @@ page.on("back", function(){
     }
 });
 
+var delay3 = mm("do_Timer");
+delay3.delay = 3000;
+delay3.interval = 1000;
+delay3.on("tick", function(){
+    this.stop();
+    canBack = false;
+});
+
+function subChange(num,button,imgs,lbs)
+{
+	var strings = ["下载","频道","订阅","我的"];
+	button.text = strings[num];
+	var url = [
+	           "source://image/main/shouye",
+	           "source://image/main/pindao",
+	           "source://image/main/dingyue",
+	           "source://image/main/wode"
+	           ];
+	for(var i = 0 ; i < 4 ; i++)
+    {
+    	imgs[i].source = url[i];
+    	lbs[i].fontColor = "222222FF";
+    }
+    imgs[num].source += "b";
+    lbs[num].fontColor = "0080FFFF";
+    for(var i = 0 ; i < 4 ; i++)
+    {
+    	imgs[i].source += ".png";
+    }
+	img.visible = false;
+	bt.visible = false;
+}
+
+function indexChange(num,sv,button,imgs,lbs,img,bt)
+{
+	sv.set({index: num});
+    sv.refreshItems();
+    subChange(num,button,imgs,lbs);
+}
+
 do_button.on("touch",function(data, e){
 	if(do_button.text == "下载")
 	{
-		app.openPage("source://view/download.ui","a");
+		app.openPage("source://view/download.ui","");
 	}
 });
 
 do_button_0.on("touch",function(data, e){
-	app.openPage("source://view/shouyefile/barcode.ui","a");
+	app.openPage("source://view/shouyefile/barcode.ui","");
 });
 
 do_button_1.on("touch",function(data, e){
-	app.openPage("source://view/sub.ui","a");
+	app.openPage("source://view/sub.ui","");
 	imageview.visible = false;
 	do_button_3.visible = false;
 });
@@ -57,15 +97,8 @@ do_button_3.on("touch",function(data, e){
 	do_button_3.visible = false;
 });
 
-var delay3 = mm("do_Timer");
-delay3.delay = 3000;
-delay3.interval = 1000;
-delay3.on("tick", function(){
-    this.stop();
-    canBack = false;
-});
 
-var action_alys = [ui("shouye"), ui("pindao"), ui("dingyue"),ui("wode")];
+//点击底部按钮实现主界面以及底部图片颜色的切换
 var action_imgs = [ui("img_0"), ui("img_1"), ui("img_2"), ui("img_3")];
 var action_lbs = [ui("lb_0"), ui("lb_1"), ui("lb_2"), ui("lb_3"),];
 
@@ -82,138 +115,31 @@ do_slideview_1.refreshItems({});
 
 var shouye = ui("shouye");
 shouye.on("touch",function(data, e){
-	do_slideview_1.set({index: 0});
-    do_slideview_1.refreshItems();
-    do_button.text = "下载";
-	action_imgs[0].source = "source://image/main/shouyeb.png";
-	action_imgs[1].source = "source://image/main/pindao.png";
-	action_imgs[2].source = "source://image/main/dingyue.png";
-	action_imgs[3].source = "source://image/main/wode.png";
-	action_lbs[0].fontColor = "0080FFFF";
-	action_lbs[1].fontColor = "222222FF";
-	action_lbs[2].fontColor = "222222FF";
-	action_lbs[3].fontColor = "222222FF";
-	imageview.visible = false;
-	do_button_3.visible = false;
+	indexChange(0,do_slideview_1,do_button,action_imgs,action_lbs,imageview,do_button_3);
 });
 
 var pindao = ui("pindao");
 pindao.on("touch",function(data, e){
-	do_slideview_1.set({index: 1});
-    do_slideview_1.refreshItems();
-    do_button.text = "频道";
-	action_imgs[0].source = "source://image/main/shouye.png";
-	action_imgs[1].source = "source://image/main/pindaob.png";
-	action_imgs[2].source = "source://image/main/dingyue.png";
-	action_imgs[3].source = "source://image/main/wode.png";
-	action_lbs[0].fontColor = "222222FF";
-	action_lbs[1].fontColor = "0080FFFF";
-	action_lbs[2].fontColor = "222222FF";
-	action_lbs[3].fontColor = "222222FF";
-	imageview.visible = false;
-	do_button_3.visible = false;
+	indexChange(1,do_slideview_1,do_button,action_imgs,action_lbs,imageview,do_button_3);
 });
 
 var dingyue = ui("dingyue");
 dingyue.on("touch",function(data, e){
-	do_slideview_1.set({index: 2});
-    do_slideview_1.refreshItems();
-    do_button.text = "订阅";
-	action_imgs[0].source = "source://image/main/shouye.png";
-	action_imgs[1].source = "source://image/main/pindao.png";
-	action_imgs[2].source = "source://image/main/dingyueb.png";
-	action_imgs[3].source = "source://image/main/wode.png";
-	action_lbs[0].fontColor = "222222FF";
-	action_lbs[1].fontColor = "222222FF";
-	action_lbs[2].fontColor = "0080FFFF";
-	action_lbs[3].fontColor = "222222FF";
-	imageview.visible = false;
-	do_button_3.visible = false;
+	indexChange(2,do_slideview_1,do_button,action_imgs,action_lbs,imageview,do_button_3);
 });
 
 var wode = ui("wode");
 wode.on("touch",function(data, e){
-	do_slideview_1.set({index: 3});
-    do_slideview_1.refreshItems();
-    do_button.text = "我的";
-	action_imgs[0].source = "source://image/main/shouye.png";
-	action_imgs[1].source = "source://image/main/pindao.png";
-	action_imgs[2].source = "source://image/main/dingyue.png";
-	action_imgs[3].source = "source://image/main/wodeb.png";
-	action_lbs[0].fontColor = "222222FF";
-	action_lbs[1].fontColor = "222222FF";
-	action_lbs[2].fontColor = "222222FF";
-	action_lbs[3].fontColor = "0080FFFF"
-	imageview.visible = false;
-	do_button_3.visible = false;
+	indexChange(3,do_slideview_1,do_button,action_imgs,action_lbs,imageview,do_button_3);
 });
 
-
+//滑动主界面实现底部图片的切换
 do_slideview_1.on("indexChanged",function(data, e){
-	if(data == 0)
-	{
-		action_imgs[0].source = "source://image/main/shouyeb.png";
-		action_imgs[1].source = "source://image/main/pindao.png";
-		action_imgs[2].source = "source://image/main/dingyue.png";
-		action_imgs[3].source = "source://image/main/wode.png";
-		action_lbs[0].fontColor = "0080FFFF";
-		action_lbs[1].fontColor = "222222FF";
-		action_lbs[2].fontColor = "222222FF";
-		action_lbs[3].fontColor = "222222FF";
-		do_button.text = "下载";
-	}
-	else if(data == 1)
-	{
-		action_imgs[0].source = "source://image/main/shouye.png";
-		action_imgs[1].source = "source://image/main/pindaob.png";
-		action_imgs[2].source = "source://image/main/dingyue.png";
-		action_imgs[3].source = "source://image/main/wode.png";
-		action_lbs[0].fontColor = "222222FF";
-		action_lbs[1].fontColor = "0080FFFF";
-		action_lbs[2].fontColor = "222222FF";
-		action_lbs[3].fontColor = "222222FF";
-		do_button.text = "频道";
-	}
-	else if(data == 2)
-	{
-		action_imgs[0].source = "source://image/main/shouye.png";
-		action_imgs[1].source = "source://image/main/pindao.png";
-		action_imgs[2].source = "source://image/main/dingyueb.png";
-		action_imgs[3].source = "source://image/main/wode.png";
-		action_lbs[0].fontColor = "222222FF";
-		action_lbs[1].fontColor = "222222FF";
-		action_lbs[2].fontColor = "0080FFFF";
-		action_lbs[3].fontColor = "222222FF";
-		do_button.text = "订阅";
-	}
-	else
-	{
-		action_imgs[0].source = "source://image/main/shouye.png";
-		action_imgs[1].source = "source://image/main/pindao.png";
-		action_imgs[2].source = "source://image/main/dingyue.png";
-		action_imgs[3].source = "source://image/main/wodeb.png";
-		action_lbs[0].fontColor = "222222FF";
-		action_lbs[1].fontColor = "222222FF";
-		action_lbs[2].fontColor = "222222FF";
-		action_lbs[3].fontColor = "0080FFFF";
-		do_button.text = "我的";
-	}
+	subChange(data,do_button,action_imgs,action_lbs);
 });
 
 
 
 page.on("event1", function(data, e) {
-	do_slideview_1.set({index: 2});
-    do_slideview_1.refreshItems();
-    do_button.text = "订阅";
-	action_imgs[0].source = "source://image/main/shouye.png";
-	action_imgs[1].source = "source://image/main/pindao.png";
-	action_imgs[2].source = "source://image/main/dingyueb.png";
-	action_imgs[3].source = "source://image/main/wode.png";
-	action_lbs[0].fontColor = "222222FF";
-	action_lbs[1].fontColor = "222222FF";
-	action_lbs[2].fontColor = "0080FFFF";
-	action_lbs[3].fontColor = "222222FF";
-	imageview.visible = false;
-	do_button_3.visible = false;
+	indexChange(2,do_slideview_1,do_button,action_imgs,action_lbs,imageview,do_button_3);
 });

@@ -1,41 +1,49 @@
 {
-    "RootView": {
-        "id": "AlayoutRoot",
-        "width": "480",
-        "height": "854",
-        "type": "do_ALayout",
-        "views": [
-            {
-                "id": "do_scrollview_1",
-                "width": "480",
-                "height": "700",
-                "type": "do_ScrollView",
-                "views": [
-                    {
-                        "id": "do_alayout_1",
-                        "width": "480",
-                        "height": "1000",
-                        "type": "do_ALayout",
-                        "views": [
-                            {
-                                "id": "do_imageview_1",
-                                "width": "480",
-                                "height": "300",
-                                "type": "do_ImageView",
-                                "source": "source://image/pindao/pindaoyi.png"
-                            },
-                            {
-                                "id": "do_imageview_2",
-                                "y": "300",
-                                "width": "480",
-                                "height": "700",
-                                "type": "do_ImageView",
-                                "source": "source://image/pindao/pindao2.png"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
+	"RootView":{
+		"width":"480",
+		"id":"AlayoutRoot",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"width":"480",
+				"id":"do_scrollview_1",
+				"type":"do_ScrollView",
+				"views":[
+					{
+						"width":"480",
+						"id":"do_alayout_1",
+						"type":"do_ALayout",
+						"views":[
+							{
+								"width":"480",
+								"y":"230",
+								"id":"do_Button_1",
+								"bgImage":"source://image/pindao/pindao1.png",
+								"type":"do_Button",
+								"height":"70"
+							},
+							{
+								"width":"480",
+								"y":"300",
+								"id":"do_Button_2",
+								"bgImage":"source://image/pindao/pindao2.png",
+								"type":"do_Button",
+								"height":"700"
+							},
+							{
+								"width":"480",
+								"id":"do_Button_0",
+								"bgImage":"source://image/pindao/pindao0.png",
+								"type":"do_Button",
+								"height":"230"
+							}
+						],
+						"height":"1000"
+					}
+				],
+				"height":"700"
+			}
+		],
+		"height":"854"
+	}
 }

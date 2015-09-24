@@ -79,39 +79,83 @@
 								"height":"70"
 							},
 							{
-								"width":"480",
-								"y":"380",
-								"id":"do_imageview_1",
-								"source":"source://image/shouye/shouye1.png",
-								"type":"do_ImageView",
-								"height":"400"
+								"width":"240",
+								"y":"375",
+								"id":"do_Button_1",
+								"bgImage":"source://image/shouye/shouye1.png",
+								"type":"do_Button",
+								"height":"200"
+							},
+							{
+								"x":"241",
+								"width":"239",
+								"y":"375",
+								"id":"do_Button_2",
+								"bgImage":"source://image/shouye/shouye2.png",
+								"type":"do_Button",
+								"height":"200"
+							},
+							{
+								"width":"240",
+								"y":"575",
+								"id":"do_Button_3",
+								"bgImage":"source://image/shouye/shouye3.png",
+								"type":"do_Button",
+								"height":"200"
+							},
+							{
+								"x":"241",
+								"width":"239",
+								"y":"575",
+								"id":"do_Button_4",
+								"bgImage":"source://image/shouye/shouye4.png",
+								"type":"do_Button",
+								"height":"200"
 							},
 							{
 								"width":"480",
 								"y":"780",
-								"id":"do_imageview_2",
-								"source":"source://image/shouye/shouye2.png",
-								"type":"do_ImageView",
-								"height":"690"
+								"id":"do_Button_5",
+								"bgImage":"source://image/shouye/shouye5.png",
+								"type":"do_Button",
+								"height":"70"
 							},
 							{
-								"width":"480",
-								"y":"1470",
-								"id":"do_imageview_3",
-								"source":"source://image/shouye/shouye3.png",
-								"type":"do_ImageView",
-								"height":"540"
+								"width":"240",
+								"y":"850",
+								"id":"do_Button_6",
+								"bgImage":"source://image/shouye/shouye6.png",
+								"type":"do_Button",
+								"height":"200"
 							},
 							{
-								"width":"480",
-								"y":"2010",
-								"id":"do_imageview_4",
-								"source":"source://image/shouye/shouye4.png",
-								"type":"do_ImageView",
-								"height":"700"
+								"x":"241",
+								"width":"239",
+								"y":"850",
+								"id":"do_Button_7",
+								"bgImage":"source://image/shouye/shouye7.png",
+								"type":"do_Button",
+								"height":"200"
+							},
+							{
+								"width":"240",
+								"y":"1050",
+								"id":"do_Button_8",
+								"bgImage":"source://image/shouye/shouye8.png",
+								"type":"do_Button",
+								"height":"200"
+							},
+							{
+								"x":"241",
+								"width":"239",
+								"y":"1050",
+								"id":"do_Button_9",
+								"bgImage":"source://image/shouye/shouye9.png",
+								"type":"do_Button",
+								"height":"200"
 							}
 						],
-						"height":"2710"
+						"height":"1450"
 					}
 				],
 				"height":"700"

@@ -1,41 +1,61 @@
 {
-    "RootView": {
-        "id": "AlayoutRoot",
-        "width": "480",
-        "height": "854",
-        "type": "do_ALayout",
-        "views": [
-            {
-                "id": "do_scrollview_2",
-                "width": "480",
-                "height": "700",
-                "type": "do_ScrollView",
-                "views": [
-                    {
-                        "id": "do_alayout_2",
-                        "width": "480",
-                        "height": "950",
-                        "type": "do_ALayout",
-                        "views": [
-                            {
-                                "id": "do_imageview_1",
-                                "width": "480",
-                                "height": "450",
-                                "type": "do_ImageView",
-                                "source": "source://image/dingyue/dingyue1.png"
-                            },
-                            {
-                                "id": "do_imageview_2",
-                                "y": "450",
-                                "width": "480",
-                                "height": "500",
-                                "type": "do_ImageView",
-                                "source": "source://image/dingyue/dingyue2.png"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
+	"RootView":{
+		"width":"480",
+		"id":"AlayoutRoot",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"bgColor":"EEEEEEFF",
+				"width":"480",
+				"id":"title",
+				"type":"do_ALayout",
+				"views":[
+					{
+						"bgColor":"00000000",
+						"x":"40",
+						"width":"135",
+						"y":"10",
+						"fontSize":"20",
+						"id":"jxgb",
+						"text":"精选广播",
+						"type":"do_Button",
+						"radius":"20",
+						"fontStyle":"bold",
+						"fontColor":"1164E1FF",
+						"height":"40"
+					},
+					{
+						"x":"190",
+						"y":"10",
+						"fontSize":"20",
+						"id":"asj",
+						"text":"按时间",
+						"type":"do_Button",
+						"radius":"20",
+						"height":"40"
+					},
+					{
+						"x":"310",
+						"width":"99",
+						"y":"10",
+						"fontSize":"20",
+						"id":"apd",
+						"text":"按频道",
+						"type":"do_Button",
+						"radius":"20",
+						"height":"40"
+					}
+				],
+				"height":"60"
+			},
+			{
+				"width":"480",
+				"y":"60",
+				"id":"viewShower",
+				"type":"do_ViewShower",
+				"height":"640"
+			}
+		],
+		"height":"854"
+	}
 }

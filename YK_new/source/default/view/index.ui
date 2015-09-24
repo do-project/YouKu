@@ -29,13 +29,13 @@
 								"height":"50"
 							},
 							{
-								"x":"290",
-								"width":"50",
-								"y":"10",
+								"x":"310",
+								"width":"40",
+								"y":"15",
 								"id":"do_button_1",
 								"bgImage":"source://image/main/TB1.png",
 								"type":"do_Button",
-								"height":"50"
+								"height":"40"
 							},
 							{
 								"x":"428",
@@ -47,13 +47,13 @@
 								"height":"57"
 							},
 							{
-								"x":"372",
-								"width":"35",
-								"y":"17",
+								"x":"375",
+								"width":"40",
+								"y":"15",
 								"id":"do_button_0",
 								"bgImage":"source://image/main/TB2.png",
 								"type":"do_Button",
-								"height":"35"
+								"height":"40"
 							}
 						],
 						"height":"70"

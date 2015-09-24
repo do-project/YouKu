@@ -1,0 +1,19 @@
+{
+	"RootView":{
+		"x":"0",
+		"width":"480",
+		"y":"0",
+		"id":"main",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"width":"480",
+				"id":"do_ImageView_1",
+				"source":"source://image/dingyue/dingyue6.png",
+				"type":"do_ImageView",
+				"height":"630"
+			}
+		],
+		"height":"630"
+	}
+}

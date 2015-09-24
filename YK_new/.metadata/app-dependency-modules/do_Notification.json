@@ -61,7 +61,7 @@
           "Type": "String",
           "Required": 0,
           "DefaultValue": "",
-          "Description": ""
+          "Description": "alert窗口的正文"
         },
         {
           "ID": "title",
@@ -69,7 +69,7 @@
           "Type": "String",
           "Required": 0,
           "DefaultValue": "",
-          "Description": ""
+          "Description": "alert窗口的标题"
         }
       ]
     },
@@ -78,7 +78,7 @@
       "Name": "弹出confirm窗口",
       "Description": "confirm窗口有2个按钮，可以自定义按钮的文本内容",
       "ReturnType": "Number",
-      "ReturnDesc": "1 表示点击了button1按钮2 表示点击了button2按钮",
+      "ReturnDesc": "1 表示点击了button1按钮\r\n2 表示点击了button2按钮",
       "Paras": [
         {
           "ID": "text",
@@ -86,7 +86,7 @@
           "Type": "String",
           "Required": 0,
           "DefaultValue": "",
-          "Description": ""
+          "Description": "confirm窗口的正文"
         },
         {
           "ID": "title",
@@ -94,23 +94,23 @@
           "Type": "String",
           "Required": 0,
           "DefaultValue": "",
-          "Description": ""
+          "Description": "confirm窗口的标题"
         },
         {
           "ID": "button1text",
-          "Name": "左边按钮1的正文",
+          "Name": "按钮1的文本",
           "Type": "String",
           "Required": 0,
           "DefaultValue": "确定",
-          "Description": ""
+          "Description": "左边按钮1的正文"
         },
         {
           "ID": "button2text",
-          "Name": "右边按钮2的正文",
+          "Name": "按钮2的文本",
           "Type": "String",
           "Required": 0,
           "DefaultValue": "取消",
-          "Description": ""
+          "Description": "右边按钮2的正文"
         }
       ]
     }
