@@ -65,5 +65,5 @@ huiyuan.on("touch",function(data, e){
 });
 
 shezhi.on("touch",function(data, e){
-	nf.alert("设置成功！");
+	app.openPage("source://view/shezhi.ui","");
 });

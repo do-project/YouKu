@@ -5,6 +5,7 @@ var global = sm("do_Global");
 var do_slideview_1 = ui("do_slideview_1");
 var listdata = mm("do_ListData");
 var canBack = false;
+
 var do_button = ui("do_button");
 var do_button_0 = ui("do_button_0");
 var do_button_1 = ui("do_button_1");
@@ -32,7 +33,7 @@ delay3.on("tick", function(){
 
 function subChange(num,button,imgs,lbs)
 {
-	var strings = ["下载","频道","订阅","我的"];
+	var strings = ["优酷","频道","订阅","我的"];
 	button.text = strings[num];
 	var url = [
 	           "source://image/main/shouye",
@@ -62,12 +63,6 @@ function indexChange(num,sv,button,imgs,lbs,img,bt)
     subChange(num,button,imgs,lbs);
 }
 
-do_button.on("touch",function(data, e){
-	if(do_button.text == "下载")
-	{
-		app.openPage("source://view/download.ui","");
-	}
-});
 
 do_button_0.on("touch",function(data, e){
 	app.openPage("source://view/shouyefile/barcode.ui","");
@@ -102,7 +97,7 @@ do_button_3.on("touch",function(data, e){
 var action_imgs = [ui("img_0"), ui("img_1"), ui("img_2"), ui("img_3")];
 var action_lbs = [ui("lb_0"), ui("lb_1"), ui("lb_2"), ui("lb_3"),];
 
-do_slideview_1.bindItems(listdata );
+do_slideview_1.bindItems(listdata);
 
 listdata.addData([
     {template : 0},
